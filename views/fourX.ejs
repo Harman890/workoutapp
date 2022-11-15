@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upper Lower</title>
+</head>
+
+<body>
+    <h1>Upper Lower 4x/week</h1>
+
+    <form action="/print" method="POST">
+        <input type="hidden" name="weekId" id="" value="<%=week%>">
+
+        <h2>Upper Body</h2>
+        <span>Main chest exercise: (pick one)</span>
+        <label for="flatBench">Flat bench press</label>
+        <input type="checkbox" name="chestMain" id="flatBench" value="Flat bench press">
+        <label for="incBench">Incline bench press</label>
+        <input type="checkbox" name="chestMain" id="incBench" value="Incline bench press">
+        <label for="flatDB">Flat dumbbell press</label>
+        <input type="checkbox" name="chestMain" id="flatDB" value="Flat dumbbell press">
+        <label for="incDB">Incline dumbbell press</label>
+        <input type="checkbox" name="chestMain" id="incDB" value="Incline dumbbell press">
+        <br>
+        <hr>
+        <span>Main back exercise: (pick one)</span>
+        <label for="bbRow">Bentover barbell row</label>
+        <input type="checkbox" name="backMain" id="bbRow" value="Bentover barbell row">
+        <label for="machineRow">Machine row</label>
+        <input type="checkbox" name="backMain" id="machineRow" value="Machine row">
+        <br>
+        <hr>
+        <span>Main shoulder exercise: (pick one)</span>
+        <label for="ohp">Barbell overhead press</label>
+        <input type="checkbox" name="shoulderMain" id="ohp" value="Barbell overhead press">
+        <label for="seatedPress">Seated shoulder press</label>
+        <input type="checkbox" name="shoulderMain" id="seatedPress" value="Seated shoulder press">
+        <br>
+        <hr>
+        <span>Secondary chest exercise: (pick one)</span>
+        <br>
+        <label for="flatBench2">Flat bench press (if not selected for main chest exercise)</label>
+        <input type="checkbox" name="chestSecond" id="flatBench2" value="Flat bench press">
+        <br>
+        <label for="incBench2">Incline bench press (if not selected for main chest exercise)</label>
+        <input type="checkbox" name="chestSecond" id="incBench2" value="Incline bench press">
+        <br>
+        <label for="flatDB2">Flat dumbbell press (if not selected for main chest exercise)</label>
+        <input type="checkbox" name="chestSecond" id="flatDB2" value="Flat dumbbell press">
+        <br>
+        <label for="incDB2">Incline dumbbell press (if not selected for main chest exercise)</label>
+        <input type="checkbox" name="chestSecond" id="incDB2" value="Incline dumbbell press">
+        <br>
+        <label for="cgbp">Close grip bench press</label>
+        <input type="checkbox" name="chestSecond" id="cgbp" value="Close grip bench press">
+        <br>
+        <hr>
+        <span>Secondary back exercise: (pick one)</span>
+        <label for="pullups">Pullups</label>
+        <input type="checkbox" name="backSecond" id="pullups" value="Pullups">
+        <label for="LatPulldown">Lat pulldown</label>
+        <input type="checkbox" name="backSecond" id="LatPulldown" value="Lat pulldown">
+        <label for="chinups">Chinups</label>
+        <input type="checkbox" name="backSecond" id="chinups" value="Chinups">
+        <br>
+        <hr>
+        <span>Accessory exercise: (pick two)</span>
+        <label for="dbFly">Dumbbell fly</label>
+        <input type="checkbox" name="accessory" id="dbFly" value="Dumbbell fly">
+        <label for="lateral">Lateral raises</label>
+        <input type="checkbox" name="accessory" id="lateral" value="Lateral raises">
+        <label for="seatRow">Seated row</label>
+        <input type="checkbox" name="accessory" id="seatRow" value="Seated row">
+        <label for="dbRow">Dumbbell row</label>
+        <input type="checkbox" name="accessory" id="dbRow" value="Dumbbell row">
+        <label for="bbCurl">Barbell curl</label>
+        <input type="checkbox" name="accessory" id="bbCurl" value="Barbell curl">
+        <label for="skullCrush">Skull crusher</label>
+        <input type="checkbox" name="accessory" id="skullCrush" value="Skull crusher">
+        <br>
+        <hr>
+        <span>Ab exercise: (pick one)</span>
+        <label for="crunch">Crunches</label>
+        <input type="checkbox" name="abs" id="crunch" value="Crunches">
+        <label for="ropeCrunch">Rope crunches</label>
+        <input type="checkbox" name="abs" id="ropeCrunch" value="Rope crunches">
+        <label for="legRaise">Hanging/Lying leg raises</label>
+        <input type="checkbox" name="abs" id="legRaise" value="Hanging/Lying leg raises">
+        <br>
+        <hr>
+        <h2>Lower Body</h2>
+        <span>Main leg exercise: (pick one)</span>
+        <label for="squat">Back squat</label>
+        <input type="checkbox" name="legsMain" id="squat" value="Back squat">
+        <br>
+        <hr>
+        <span>Secondary legs exercise: (pick one)</span>
+        <label for="legPress">Leg press</label>
+        <input type="checkbox" name="legsSecond" id="legPress" value="Leg press">
+        <label for="deadlift">Deadlift</label>
+        <input type="checkbox" name="legsSecond" id="deadlift" value="Deadlift">
+        <br>
+        <hr>
+        <span>Accessory exercise: (pick two)</span>
+        <label for="legEx">Leg extension</label>
+        <input type="checkbox" name="accessory2" id="legEx" value="Leg extension">
+        <label for="legCurl">Leg curl</label>
+        <input type="checkbox" name="accessory2" id="legCurl" value="Leg curl">
+        <label for="squatJump">Squat jump</label>
+        <input type="checkbox" name="accessory2" id="squatJump" value="Squat jump">
+        <label for="hipThrust">Barbell hip thrust</label>
+        <input type="checkbox" name="accessory2" id="hipThrust" value="Barbell hip thrust">
+        <br>
+        <hr>
+        <span>Ab exercise: (pick one)</span>
+        <label for="crunch">Crunches</label>
+        <input type="checkbox" name="abs2" id="crunch" value="Crunches">
+        <label for="ropeCrunch">Rope crunches</label>
+        <input type="checkbox" name="abs2" id="ropeCrunch" value="Rope crunches">
+        <label for="legRaise">Hanging/Lying leg raises</label>
+        <input type="checkbox" name="abs2" id="legRaise" value="Hanging/Lying leg raises">
+        <br>
+        <hr>
+
+        <button>Submit</button>
+    </form>
+</body>
+
+</html>
