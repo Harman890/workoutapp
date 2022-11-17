@@ -1,0 +1,37 @@
+/* .maincon {
+    background-image: url('https://images.unsplash.com/photo-1506485338023-6ce5f36692df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80');
+    background-size: cover;
+    height: 50%;
+    width: 50%;
+    margin: 100px auto;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 5%;
+} */
+
+.btn {
+    background-color: yellowgreen;
+    border: 2px solid black;
+}
+
+.btn:hover {
+    background-color: rgb(197, 241, 132);
+    border-color: rgb(255, 255, 255);
+    box-shadow: 0 0.5em 0.5em -0.4em white;
+    transform: translateY(-0.25em);
+    cursor: pointer;
+}
+
+body {
+    background-color: rgb(208, 69, 239);
+}
+
+h1 {
+    color: rgb(230, 213, 105);
+}
+
+.banner {
+    width: 700px;
+    height: 300px;
+    margin: 0 auto;
+    border-radius: 3%;
+}
