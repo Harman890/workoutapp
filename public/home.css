@@ -1,0 +1,28 @@
+body {
+    /* background-color: rgb(70, 70, 160); */
+    background-image: url("https://images.unsplash.com/photo-1521804906057-1df8fdb718b7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+    background-size: cover;
+}
+
+h1 {
+    color: white;
+}
+
+.startbtn {
+    background-color: greenyellow;
+    color: black;
+    border: 2px solid black;
+    padding: 1em 2em;
+    font-size: 1em;
+    transition: all 0.25s;
+
+
+}
+
+.startbtn:hover {
+    background-color: rgb(197, 241, 132);
+    border-color: rgb(255, 255, 255);
+    box-shadow: 0 0.5em 0.5em -0.4em white;
+    transform: translateY(-0.25em);
+    cursor: pointer;
+}

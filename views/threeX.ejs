@@ -6,13 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Full Body</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/build.css">
 </head>
 
 <body>
-    <h1>Full Body 3x/Week</h1>
+    <h1 class="text-center">Full Body 3x/Week</h1>
 
     <form action="/print" method="POST">
-        <h3>Full Body Programming</h3>
         <input type="hidden" name="weekId" id="" value="<%=week%>">
 
         <span>Main leg exercise: (pick one)</span>
@@ -41,8 +45,8 @@
         <span>Main shoulder exercise: (pick one)</span>
         <label for="ohp">Barbell overhead press</label>
         <input type="checkbox" name="shoulderMain" id="ohp" value="Barbell overhead press">
-        <label for="seatedPress">Seated shoulder press</label>
-        <input type="checkbox" name="shoulderMain" id="seatedPress" value="Seated shoulder press">
+        <label for="seatedPress">Seated dumbbell shoulder press</label>
+        <input type="checkbox" name="shoulderMain" id="seatedPress" value="Seated dumbbell shoulder press">
         <br>
         <hr>
         <span>Secondary legs exercise: (pick one)</span>
@@ -110,9 +114,13 @@
 
 
 
-        <button>Submit</button>
+        <div class="d-flex justify-content-end">
+            <button class="btn">Submit</button>
+        </div>
     </form>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

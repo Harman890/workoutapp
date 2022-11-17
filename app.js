@@ -3,7 +3,9 @@ const app = express();
 const path = require('path');
 const mongoose = require('mongoose');
 
+// app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -30,6 +32,10 @@ app.get('/freq', (req, res) => {
 })
 app.post('/freq', async (req, res) => {
     const { schedule } = req.body
+
+    if (schedule === 'null') {
+        res.redirect('/freq')
+    }
 
     if (schedule === 'threeX') {
         const week = new Week({

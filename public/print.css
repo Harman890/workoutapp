@@ -1,0 +1,37 @@
+.week {
+    display: block;
+    height: 2em;
+    width: 100px;
+    border: 2px solid black;
+    text-align: center;
+}
+
+label {
+    display: block;
+    text-align: center;
+}
+
+.weekblock {
+    display: inline-block;
+}
+
+.day {
+    display: inline-block;
+}
+
+.btn {
+    background-color: yellowgreen;
+    border: 2px solid black;
+}
+
+.btn:hover {
+    background-color: rgb(197, 241, 132);
+    border-color: rgb(255, 255, 255);
+    box-shadow: 0 0.5em 0.5em -0.4em white;
+    transform: translateY(-0.25em);
+    cursor: pointer;
+}
+
+.btndiv {
+    margin-left: 70%;
+}
