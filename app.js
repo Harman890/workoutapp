@@ -188,6 +188,6 @@ app.get('/print/:workoutId/:weekId', async (req, res) => {
 })
 
 
-// app.listen(3000, () => {
-//     console.log('Connected on port 3000.')
-// })
+app.listen(3000, () => {
+    // console.log('Connected on port 3000.')
+})
