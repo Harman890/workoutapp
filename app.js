@@ -10,8 +10,17 @@ app.use(express.urlencoded({ extended: true }));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-const dbUrl = 'mongodb://localhost:27017/workoutapp';
-// const dbUrl = process.env.DB_URL ||
+let username = 'firstuser';
+let password = 'firstuserpass';
+let cluster = 'cluster0.h2pcjyp.mongodb.net';
+let authSource = 'true';
+let authMech = 'majority';
+
+// const dbUrl = 'mongodb://localhost:27017/workoutapp';
+const dbUrl = `mongodb+srv://${username}:${password}@${cluster}/?retryWrites=${authSource}&w=${authMech}`
+// const dbUrl = process.env.DB_URL;
+
+// console.log(process.env)
 
 mongoose.connect(dbUrl, {
     useNewUrlParser: true,
@@ -20,7 +29,6 @@ mongoose.connect(dbUrl, {
 
 const Workout = require('./models/workout');
 const Week = require('./models/week');
-const { nextTick } = require('process');
 
 
 
@@ -180,6 +188,6 @@ app.get('/print/:workoutId/:weekId', async (req, res) => {
 })
 
 
-app.listen(3000, () => {
-    console.log('Connected on port 3000.')
-})
+// app.listen(3000, () => {
+//     console.log('Connected on port 3000.')
+// })
